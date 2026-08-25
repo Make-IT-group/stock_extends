@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_expiration_alert_user,stock.expiration.alert user,model_stock_expiration_alert,stock.group_stock_user,1,1,0,0
+access_stock_expiration_alert_manager,stock.expiration.alert manager,model_stock_expiration_alert,stock.group_stock_manager,1,1,1,1
+access_stock_expiration_alert_rule_user,stock.expiration.alert.rule user,model_stock_expiration_alert_rule,stock.group_stock_user,1,0,0,0
+access_stock_expiration_alert_rule_manager,stock.expiration.alert.rule manager,model_stock_expiration_alert_rule,stock.group_stock_manager,1,1,1,1
+access_stock_expiration_alert_notification_user,stock.expiration.alert.notification user,model_stock_expiration_alert_notification,stock.group_stock_user,1,0,0,0
+access_stock_expiration_alert_notification_manager,stock.expiration.alert.notification manager,model_stock_expiration_alert_notification,stock.group_stock_manager,1,1,1,1
+
