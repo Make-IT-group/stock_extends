@@ -49,12 +49,12 @@ class StockLowAlert(models.Model):
     location_id = fields.Many2one("stock.location", string="Location", readonly=True)
     company_id = fields.Many2one("res.company", string="Company", required=True, readonly=True, index=True)
     uom_id = fields.Many2one("uom.uom", string="UoM", readonly=True)
-    stock_current = fields.Float(string="Current stock", digits="Product Unit of Measure", tracking=True, readonly=True)
-    min_qty = fields.Float(string="Configured minimum", digits="Product Unit of Measure", readonly=True)
-    max_qty = fields.Float(string="Configured maximum", digits="Product Unit of Measure", readonly=True)
+    stock_current = fields.Float(string="Current stock", digits="Product Unit", tracking=True, readonly=True)
+    min_qty = fields.Float(string="Configured minimum", digits="Product Unit", readonly=True)
+    max_qty = fields.Float(string="Configured maximum", digits="Product Unit", readonly=True)
     last_purchase_date = fields.Datetime(string="Last purchase", readonly=True)
     last_supplier_id = fields.Many2one("res.partner", string="Vendor", readonly=True)
-    last_purchase_qty = fields.Float(string="Last purchase quantity", digits="Product Unit of Measure", readonly=True)
+    last_purchase_qty = fields.Float(string="Last purchase quantity", digits="Product Unit", readonly=True)
     last_purchase_order_id = fields.Many2one("purchase.order", string="Purchase order", readonly=True)
     notification_count = fields.Integer(string="Times sent", compute="_compute_notification_count")
     notification_ids = fields.One2many("stock.low.alert.notification", "alert_id", string="Notification history", readonly=True)
@@ -230,8 +230,8 @@ class StockLowAlert(models.Model):
         lines = purchase_order.order_line.filtered(lambda line: line.product_id == product)
         qty = 0.0
         for line in lines:
-            if line.product_uom and product.uom_id:
-                qty += line.product_uom._compute_quantity(line.product_qty, product.uom_id)
+            if line.product_uom_id and product.uom_id:
+                qty += line.product_uom_id._compute_quantity(line.product_qty, product.uom_id)
             else:
                 qty += line.product_qty
 
