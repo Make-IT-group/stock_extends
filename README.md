@@ -1,15 +1,15 @@
-# Make IT — Stock Extensions for Odoo 18
+# Make IT — Stock Extensions for Odoo 19
 
 <p align="center">
   <img src="low_stock_alert/static/description/icon.png" alt="Make IT - Low Stock Alerts" width="140" />
 </p>
 
 <p align="center">
-  <strong>Inventory extensions for Odoo 18 focused on proactive stock monitoring and traceable low-stock notifications.</strong>
+  <strong>Inventory extensions for Odoo 19 focused on proactive, traceable stock monitoring.</strong>
 </p>
 
 <p align="center">
-  <img alt="Odoo 18" src="https://img.shields.io/badge/Odoo-18.0-875A7B?logo=odoo&logoColor=white" />
+  <img alt="Odoo 19" src="https://img.shields.io/badge/Odoo-19.0-875A7B?logo=odoo&logoColor=white" />
   <img alt="License LGPL-3" src="https://img.shields.io/badge/License-LGPL--3-blue" />
   <img alt="Status" src="https://img.shields.io/badge/status-active-success" />
 </p>
@@ -18,7 +18,7 @@
 
 ## Overview
 
-This repository contains inventory extensions developed by **Make IT** for **Odoo 18**.
+This repository contains inventory extensions developed by **Make IT** for **Odoo 19**.
 
 The current module, **Low Stock Alerts**, extends Odoo's native reordering rules (`stock.warehouse.orderpoint`) with a configurable alerting layer. It detects products whose current stock reaches or falls below the configured minimum quantity and creates traceable alerts for the responsible users.
 
@@ -30,7 +30,7 @@ Instead of replacing Odoo's replenishment workflow, the module works on top of t
 
 **Make IT - Low Stock Alerts**
 
-Version: `18.0.1.1.0`
+Version: `19.0.1.0.2`
 
 Dependencies:
 
@@ -39,6 +39,14 @@ Dependencies:
 - `mail`
 
 The module provides centralized low-stock monitoring, configurable responsibility rules, exceptions, notification history, activity tracking, email notifications, and automatic alert resolution.
+
+### `stock_expiration_alert`
+
+**Make IT - Stock Expiration Alerts**
+
+Version: `19.0.1.0.0`
+
+Monitors positive stock by lot and internal location using Odoo's native expiration dates. Prioritized rules configure product/category/warehouse/location scope, advance warning days, responsible user, severity, and notification channel.
 
 ## Main features
 
@@ -173,7 +181,7 @@ If the feature is disabled from Inventory settings, the scheduled action exits w
 1. Clone this repository into an Odoo addons path:
 
    ```bash
-   git clone -b 18.0 https://github.com/Make-IT-group/stock_extends.git
+   git clone -b 19.0 https://github.com/Asociacion-Mexicana-de-Ingenieria/stock_extends.git
    ```
 
 2. Make sure the repository path is included in your Odoo `addons_path`.
@@ -244,7 +252,8 @@ Odoo displays translated labels and messages according to the language configure
 ```text
 stock_extends/
 ├── README.md
-└── low_stock_alert/
+├── low_stock_alert/
+└── stock_expiration_alert/
     ├── data/
     ├── i18n/
     ├── models/
@@ -262,7 +271,7 @@ stock_extends/
 This branch is intended for:
 
 ```text
-Odoo 18.0
+Odoo 19.0
 ```
 
 Use the corresponding repository branch for other Odoo versions when available.

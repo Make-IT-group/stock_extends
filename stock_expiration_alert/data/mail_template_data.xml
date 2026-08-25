@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="mail_template_stock_expiration_alert" model="mail.template">
+        <field name="name">Stock expiration alert</field>
+        <field name="model_id" ref="model_stock_expiration_alert"/>
+        <field name="subject">[{{ object.severity.upper() }}] Expiring stock: {{ object.product_id.display_name }}</field>
+        <field name="email_from">{{ object.company_id.email_formatted or user.email_formatted }}</field>
+        <field name="body_html" type="html">
+            <div style="font-family: Arial, sans-serif; font-size: 14px; color: #2f3136;">
+                <p>Hello <t t-out="object.assigned_user_id.name or ''"/>,</p>
+                <p>Stock expiration requires your attention for <strong><t t-out="object.product_id.display_name"/></strong>.</p>
+                <table style="border-collapse: collapse; width: 100%; max-width: 620px;">
+                    <tr><td style="padding:6px 12px;background:#f4f5f7;"><strong>Lot/Serial</strong></td><td style="padding:6px 12px;"><t t-out="object.lot_id.name"/></td></tr>
+                    <tr><td style="padding:6px 12px;background:#f4f5f7;"><strong>Expiration</strong></td><td style="padding:6px 12px;"><t t-out="object.expiration_date"/></td></tr>
+                    <tr><td style="padding:6px 12px;background:#f4f5f7;"><strong>Days remaining</strong></td><td style="padding:6px 12px;"><t t-out="object.days_remaining"/></td></tr>
+                    <tr><td style="padding:6px 12px;background:#f4f5f7;"><strong>Quantity</strong></td><td style="padding:6px 12px;"><t t-out="object.quantity"/> <t t-out="object.uom_id.name or ''"/></td></tr>
+                    <tr><td style="padding:6px 12px;background:#f4f5f7;"><strong>Location</strong></td><td style="padding:6px 12px;"><t t-out="object.location_id.display_name"/></td></tr>
+                    <tr><td style="padding:6px 12px;background:#f4f5f7;"><strong>Severity</strong></td><td style="padding:6px 12px;"><t t-out="object.severity"/></td></tr>
+                </table>
+                <p>Review alert <strong><t t-out="object.name"/></strong> in Inventory / Reporting / Expiration Alerts.</p>
+            </div>
+        </field>
+        <field name="auto_delete" eval="False"/>
+    </record>
+</odoo>
+

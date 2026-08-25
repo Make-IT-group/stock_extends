@@ -1,0 +1,202 @@
+# Translation of Odoo Server.
+# This file contains the translation of stock_expiration_alert.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Stock Expiration Alerts"
+msgstr "Alertas de caducidad de existencias"
+
+msgid "Expiration Alerts"
+msgstr "Alertas de caducidad"
+
+msgid "Stock expiration alert"
+msgstr "Alerta de caducidad de existencias"
+
+msgid "Stock expiration alert rule"
+msgstr "Regla de alerta de caducidad"
+
+msgid "Stock expiration alert notification history"
+msgstr "Historial de notificaciones de alertas de caducidad"
+
+msgid "Enable stock expiration alerts"
+msgstr "Activar alertas de caducidad de existencias"
+
+msgid "Enable or disable automatic expiration analysis for stock lots."
+msgstr "Activa o desactiva el análisis automático de caducidad de lotes."
+
+msgid "Default notification channel"
+msgstr "Canal de notificación predeterminado"
+
+msgid "Notification channel"
+msgstr "Canal de notificación"
+
+msgid "Activity"
+msgstr "Actividad"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Activity and email"
+msgstr "Actividad y correo electrónico"
+
+msgid "Use global settings"
+msgstr "Usar configuración global"
+
+msgid "Resend every (hours)"
+msgstr "Reenviar cada (horas)"
+
+msgid "Resend frequency"
+msgstr "Frecuencia de reenvío"
+
+msgid "Alert Rules"
+msgstr "Reglas de alerta"
+
+msgid "Expiration alert rules"
+msgstr "Reglas de alerta de caducidad"
+
+msgid "Expiration alert rule"
+msgstr "Regla de alerta de caducidad"
+
+msgid "Days before expiration"
+msgstr "Días antes de la caducidad"
+
+msgid "Days before expiration cannot be negative."
+msgstr "Los días antes de la caducidad no pueden ser negativos."
+
+msgid "Responsible user"
+msgstr "Usuario responsable"
+
+msgid "Severity"
+msgstr "Severidad"
+
+msgid "Information"
+msgstr "Información"
+
+msgid "Warning"
+msgstr "Advertencia"
+
+msgid "Critical"
+msgstr "Crítica"
+
+msgid "Product category"
+msgstr "Categoría de producto"
+
+msgid "Warehouse"
+msgstr "Almacén"
+
+msgid "Location"
+msgstr "Ubicación"
+
+msgid "Scope"
+msgstr "Alcance"
+
+msgid "Lower values have higher priority."
+msgstr "Los valores menores tienen mayor prioridad."
+
+msgid "The configured category does not match the selected product category."
+msgstr "La categoría configurada no coincide con la categoría del producto seleccionado."
+
+msgid "The selected location does not belong to the configured warehouse."
+msgstr "La ubicación seleccionada no pertenece al almacén configurado."
+
+msgid "Open"
+msgstr "Abierta"
+
+msgid "Resolved"
+msgstr "Resuelta"
+
+msgid "Ignored"
+msgstr "Ignorada"
+
+msgid "Open alerts"
+msgstr "Alertas abiertas"
+
+msgid "Expired"
+msgstr "Caducado"
+
+msgid "My alerts"
+msgstr "Mis alertas"
+
+msgid "Lot/Serial Number"
+msgstr "Lote/Número de serie"
+
+msgid "Lot/Serial"
+msgstr "Lote/Serie"
+
+msgid "Expiration month"
+msgstr "Mes de caducidad"
+
+msgid "Expiration date"
+msgstr "Fecha de caducidad"
+
+msgid "Days remaining"
+msgstr "Días restantes"
+
+msgid "Assigned user"
+msgstr "Usuario asignado"
+
+msgid "Times sent"
+msgstr "Veces enviada"
+
+msgid "Send alert now"
+msgstr "Enviar alerta ahora"
+
+msgid "Mark as resolved"
+msgstr "Marcar como resuelta"
+
+msgid "Ignore"
+msgstr "Ignorar"
+
+msgid "Reopen"
+msgstr "Reabrir"
+
+msgid "Related"
+msgstr "Relacionadas"
+
+msgid "Expiring stock"
+msgstr "Existencias por caducar"
+
+msgid "Notification history"
+msgstr "Historial de notificaciones"
+
+msgid "Sent"
+msgstr "Enviada"
+
+msgid "Done"
+msgstr "Realizada"
+
+msgid "Ignored/Deleted"
+msgstr "Ignorada/Eliminada"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Error details"
+msgstr "Detalles del error"
+
+msgid "Review expiring stock"
+msgstr "Revisar existencias por caducar"
+
+msgid "Stock expiration alerts: review lots"
+msgstr "Alertas de caducidad: revisar lotes"
+
+msgid "No stock expiration alerts found."
+msgstr "No se encontraron alertas de caducidad de existencias."
+
+msgid "The alert condition is no longer applicable."
+msgstr "La condición de la alerta ya no es aplicable."
+
+msgid "The user does not have an email address configured."
+msgstr "El usuario no tiene una dirección de correo electrónico configurada."
+
+msgid "Expiring stock: %(product)s"
+msgstr "Existencias por caducar: %(product)s"
+
+msgid "Expiration alert"
+msgstr "Alerta de caducidad"

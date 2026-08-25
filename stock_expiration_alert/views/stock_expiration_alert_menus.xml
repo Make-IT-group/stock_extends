@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_stock_expiration_alert_root" name="Expiration Alerts" parent="stock.menu_warehouse_report" sequence="270" groups="stock.group_stock_user"/>
+    <menuitem id="menu_stock_expiration_alert" name="Alerts" parent="menu_stock_expiration_alert_root" action="action_stock_expiration_alert" sequence="10" groups="stock.group_stock_user"/>
+    <menuitem id="menu_stock_expiration_alert_rule" name="Alert Rules" parent="menu_stock_expiration_alert_root" action="action_stock_expiration_alert_rule" sequence="20" groups="stock.group_stock_manager"/>
+</odoo>
