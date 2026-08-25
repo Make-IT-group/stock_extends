@@ -1,0 +1,592 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * low_stock_alert
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-25 00:00+0000\n"
+"PO-Revision-Date: 2026-08-25 00:00+0000\n"
+"Last-Translator: Make IT\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: low_stock_alert
+#: model:mail.template,body_html:low_stock_alert.mail_template_stock_low_alert
+msgid "<div style=\"font-family: Arial, sans-serif; font-size: 14px;\">\n                <p>Hello <t t-out=\"object.assigned_user_id.name or ''\"/>,</p>\n                <p>Low stock was detected for <strong><t t-out=\"object.product_id.display_name\"/></strong>.</p>\n                <table style=\"border-collapse: collapse;\">\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Current stock</strong></td><td><t t-out=\"object.stock_current\"/> <t t-out=\"object.uom_id.name or ''\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Minimum</strong></td><td><t t-out=\"object.min_qty\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Maximum</strong></td><td><t t-out=\"object.max_qty\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Warehouse</strong></td><td><t t-out=\"object.warehouse_id.display_name or ''\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Last purchase vendor</strong></td><td><t t-out=\"object.last_supplier_id.display_name or '-'\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Last purchase quantity</strong></td><td><t t-out=\"object.last_purchase_qty\"/></td></tr>\n                </table>\n                <p>Review alert <strong><t t-out=\"object.name\"/></strong> in Inventory / Reporting / Alerts.</p>\n            </div>"
+msgstr "<div style=\"font-family: Arial, sans-serif; font-size: 14px;\">\n                <p>Hola <t t-out=\"object.assigned_user_id.name or ''\"/>,</p>\n                <p>Se detectó stock bajo para <strong><t t-out=\"object.product_id.display_name\"/></strong>.</p>\n                <table style=\"border-collapse: collapse;\">\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Stock actual</strong></td><td><t t-out=\"object.stock_current\"/> <t t-out=\"object.uom_id.name or ''\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Mínimo</strong></td><td><t t-out=\"object.min_qty\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Máximo</strong></td><td><t t-out=\"object.max_qty\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Almacén</strong></td><td><t t-out=\"object.warehouse_id.display_name or ''\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Proveedor última compra</strong></td><td><t t-out=\"object.last_supplier_id.display_name or '-'\"/></td></tr>\n                    <tr><td style=\"padding:4px 12px 4px 0;\"><strong>Cantidad última compra</strong></td><td><t t-out=\"object.last_purchase_qty\"/></td></tr>\n                </table>\n                <p>Consulta la alerta <strong><t t-out=\"object.name\"/></strong> en Inventario / Reportes / Alertas.</p>\n            </div>"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_notification__activity_id
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_responsible__notification_mode__activity
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__res_config_settings__stock_low_alert_notification_mode__activity
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_notification__channel__activity
+msgid "Activity"
+msgstr "Actividad"
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_responsible__notification_mode__both
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__res_config_settings__stock_low_alert_notification_mode__both
+msgid "Activity and email"
+msgstr "Actividad y correo"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__name
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_notification__alert_id
+msgid "Alert"
+msgstr "Alerta"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_exception_form
+msgid "Alert exception"
+msgstr "Excepción de alerta"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_exception_list
+msgid "Alert exceptions"
+msgstr "Excepciones de alertas"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_responsible_form
+msgid "Alert responsible"
+msgstr "Responsable de alerta"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_responsible_list
+msgid "Alert responsibles"
+msgstr "Responsables de alertas"
+
+#. module: low_stock_alert
+#: model:ir.actions.act_window,name:low_stock_alert.action_stock_low_alert
+#: model:ir.ui.menu,name:low_stock_alert.menu_stock_low_alert_root
+msgid "Alerts"
+msgstr "Alertas"
+
+#. module: low_stock_alert
+#: model_terms:ir.actions.act_window,help:low_stock_alert.action_stock_low_alert
+msgid "Alerts are automatically generated from reordering rules when current stock reaches or falls below the configured minimum."
+msgstr "Las alertas se generan automáticamente a partir de las reglas de abastecimiento cuando el stock actual llega al mínimo o queda por debajo de él."
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__assigned_user_id
+msgid "Assigned user"
+msgstr "Usuario asignado"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_responsible__category_id
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__category_id
+msgid "Category"
+msgstr "Categoría"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.res_config_settings_view_form_stock_low_alert
+msgid "Channel used when a responsible rule does not define its own channel."
+msgstr "Canal usado cuando una regla de responsable no define uno propio."
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__max_qty
+msgid "Configured maximum"
+msgstr "Máximo configurado"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__min_qty
+msgid "Configured minimum"
+msgstr "Mínimo configurado"
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "Could not create the low stock activity for %s"
+msgstr "No fue posible crear la actividad de stock bajo para %s"
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "Could not send the low stock email for %s"
+msgstr "No fue posible enviar el correo de stock bajo para %s"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_list
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Creation date"
+msgstr "Fecha de creación"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__stock_current
+msgid "Current stock"
+msgstr "Stock actual"
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "Current stock: %(stock)s %(uom)s. Minimum: %(min)s. Maximum: %(max)s."
+msgstr "Stock actual: %(stock)s %(uom)s. Mínimo: %(min)s. Máximo: %(max)s."
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_res_config_settings__stock_low_alert_notification_mode
+msgid "Default notification channel"
+msgstr "Canal de notificación por defecto"
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_notification__state__done
+msgid "Done"
+msgstr "Atendida"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_notification__email_to
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_responsible__notification_mode__email
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__res_config_settings__stock_low_alert_notification_mode__email
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_notification__channel__email
+msgid "Email"
+msgstr "Correo"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_res_config_settings__stock_low_alert_enabled
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.res_config_settings_view_form_stock_low_alert
+msgid "Enable low stock alerts"
+msgstr "Activar alertas de stock bajo"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.res_config_settings_view_form_stock_low_alert
+msgid "Enable or disable automatic reordering rule analysis."
+msgstr "Activa o desactiva el análisis automático de reglas de abastecimiento."
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_notification__state__error
+msgid "Error"
+msgstr "Error"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_notification__error_message
+msgid "Error details"
+msgstr "Detalle de error"
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "Error while processing reordering rule %s"
+msgstr "Error al procesar la regla de abastecimiento %s"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_exception_form
+msgid "Exception scope"
+msgstr "Alcance de la excepción"
+
+#. module: low_stock_alert
+#: model:ir.actions.act_window,name:low_stock_alert.action_stock_low_alert_exception
+#: model:ir.ui.menu,name:low_stock_alert.menu_stock_low_alert_exception
+msgid "Exceptions"
+msgstr "Excepciones"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__first_alert_date
+msgid "First detection"
+msgstr "Primera detección"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.res_config_settings_view_form_stock_low_alert
+msgid "hours"
+msgstr "horas"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Ignore"
+msgstr "Ignorar"
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert__state__ignored
+msgid "Ignored"
+msgstr "Ignorada"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "Ignored alerts"
+msgstr "Ignoradas"
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_notification__state__cancelled
+msgid "Ignored/Deleted"
+msgstr "Ignorada/Eliminada"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__last_alert_date
+msgid "Last detection"
+msgstr "Última detección"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__last_notification_date
+msgid "Last notification"
+msgstr "Última notificación"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__last_purchase_date
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Last purchase"
+msgstr "Última compra"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__last_purchase_qty
+msgid "Last purchase quantity"
+msgstr "Cantidad última compra"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__location_id
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__location_id
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: low_stock_alert
+#: model:ir.model,name:low_stock_alert.model_stock_low_alert
+#: model:ir.sequence,name:low_stock_alert.seq_stock_low_alert
+#: model:mail.activity.type,name:low_stock_alert.mail_activity_type_stock_low_alert
+#: model:mail.template,name:low_stock_alert.mail_template_stock_low_alert
+msgid "Low stock alert"
+msgstr "Alerta de stock bajo"
+
+#. module: low_stock_alert
+#: model:ir.model,name:low_stock_alert.model_stock_low_alert_exception
+msgid "Low stock alert exception"
+msgstr "Excepción de alerta de stock"
+
+#. module: low_stock_alert
+#: model:ir.model,name:low_stock_alert.model_stock_low_alert_notification
+msgid "Low stock alert notification history"
+msgstr "Historial de envío de alerta de stock"
+
+#. module: low_stock_alert
+#: model:ir.model,name:low_stock_alert.model_stock_low_alert_responsible
+msgid "Low stock alert responsible"
+msgstr "Responsable de alerta de stock"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.res_config_settings_view_form_stock_low_alert
+msgid "Low stock alerts"
+msgstr "Alertas de stock bajo"
+
+#. module: low_stock_alert
+#: model:ir.module.module,summary:base.module_low_stock_alert
+msgid "Low stock alerts based on reordering rules"
+msgstr "Alertas de stock bajo basadas en reglas de abastecimiento"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_mail_activity__low_stock_notification_id
+msgid "Low stock notification"
+msgstr "Notificación de stock bajo"
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "Low stock: %s"
+msgstr "Stock bajo: %s"
+
+#. module: low_stock_alert
+#: model:mail.template,subject:low_stock_alert.mail_template_stock_low_alert
+msgid "Low stock: {{ object.product_id.display_name }}"
+msgstr "Stock bajo: {{ object.product_id.display_name }}"
+
+#. module: low_stock_alert
+#: model:ir.module.module,shortdesc:base.module_low_stock_alert
+msgid "Make IT - Low Stock Alerts"
+msgstr "Make IT - Alertas de Stock"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Mark as resolved"
+msgstr "Marcar resuelta"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.res_config_settings_view_form_stock_low_alert
+msgid "Minimum time between notifications while the same low stock condition remains."
+msgstr "Tiempo mínimo entre reenvíos mientras la misma condición de stock bajo continúe."
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "My alerts"
+msgstr "Mis alertas"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: low_stock_alert
+#: model_terms:ir.actions.act_window,help:low_stock_alert.action_stock_low_alert
+msgid "No stock alerts found."
+msgstr "No hay alertas de stock."
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_responsible__notification_mode
+msgid "Notification"
+msgstr "Notificación"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.res_config_settings_view_form_stock_low_alert
+msgid "Notification channel"
+msgstr "Canal de notificación"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__notification_ids
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Notification history"
+msgstr "Historial de envíos"
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert__state__open
+msgid "Open"
+msgstr "Abierta"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "Open alerts"
+msgstr "Abiertas"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__product_id
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_responsible__product_id
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__product_id
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "Product"
+msgstr "Producto"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__last_purchase_order_id
+msgid "Purchase order"
+msgstr "Orden de compra"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__reason
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_exception_form
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Related"
+msgstr "Relacionadas"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__related_alert_count
+msgid "Related alerts"
+msgstr "Alertas relacionadas"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Reopen"
+msgstr "Reabrir"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__orderpoint_id
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__orderpoint_id
+msgid "Reordering rule"
+msgstr "Regla de abastecimiento"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_res_config_settings__stock_low_alert_resend_hours
+msgid "Resend every (hours)"
+msgstr "Reenviar cada (horas)"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.res_config_settings_view_form_stock_low_alert
+msgid "Resend frequency"
+msgstr "Frecuencia de reenvío"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__resolved_date
+msgid "Resolution date"
+msgstr "Fecha de resolución"
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert__state__resolved
+msgid "Resolved"
+msgstr "Resuelta"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "Resolved alerts"
+msgstr "Resueltas"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_responsible__user_id
+msgid "Responsible user"
+msgstr "Usuario responsable"
+
+#. module: low_stock_alert
+#: model:ir.actions.act_window,name:low_stock_alert.action_stock_low_alert_responsible
+#: model:ir.ui.menu,name:low_stock_alert.menu_stock_low_alert_responsible
+msgid "Responsibles"
+msgstr "Responsables"
+
+#. module: low_stock_alert
+#: model:mail.activity.type,summary:low_stock_alert.mail_activity_type_stock_low_alert
+msgid "Review low stock"
+msgstr "Revisar stock bajo"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_responsible_form
+msgid "Rules are evaluated by sequence. Leave the scope empty to use the user as the global responsible."
+msgstr "Las reglas se evalúan por secuencia. Deje el alcance vacío para usar el usuario como responsable general."
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_responsible_form
+msgid "Scope"
+msgstr "Alcance"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Send alert now"
+msgstr "Enviar alerta ahora"
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_notification__state__sent
+msgid "Sent"
+msgstr "Enviada"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_notification__sent_at
+msgid "Sent at"
+msgstr "Fecha de envío"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__state
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_notification__state
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Stock alert"
+msgstr "Alerta de stock"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_list
+#: model:ir.ui.menu,name:low_stock_alert.menu_stock_low_alert
+msgid "Stock alerts"
+msgstr "Alertas de stock"
+
+#. module: low_stock_alert
+#: model:ir.cron,name:low_stock_alert.ir_cron_stock_low_alert_check
+msgid "Stock alerts: review reordering rules"
+msgstr "Alertas de stock: revisar reglas de abastecimiento"
+
+#. module: low_stock_alert
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_form
+msgid "Stock and reordering rule"
+msgstr "Stock y regla de abastecimiento"
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "The alert cannot be reopened because current stock is already above the minimum."
+msgstr "No puede reabrir la alerta porque el stock actual ya está por encima del mínimo."
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "The configured category does not match the selected product category."
+msgstr "La categoría configurada no coincide con la categoría del producto seleccionado."
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "The exception must specify at least one product, category, warehouse, location, or reordering rule."
+msgstr "La excepción debe indicar al menos un producto, categoría, almacén, ubicación o regla de abastecimiento."
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "The start date cannot be later than the end date."
+msgstr "La fecha inicial no puede ser posterior a la fecha final."
+
+#. module: low_stock_alert
+#: code:addons/low_stock_alert/models/stock_low_alert.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_responsible.py:0
+#: code:addons/low_stock_alert/models/stock_low_alert_exception.py:0
+msgid "The user does not have an email address configured."
+msgstr "El usuario no tiene correo electrónico configurado."
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__notification_count
+msgid "Times sent"
+msgstr "Veces enviada"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__uom_id
+msgid "UoM"
+msgstr "UdM"
+
+#. module: low_stock_alert
+#: model:ir.model.fields.selection,name:low_stock_alert.selection__stock_low_alert_responsible__notification_mode__default
+msgid "Use global settings"
+msgstr "Usar configuración general"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_notification__user_id
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "User"
+msgstr "Usuario"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__date_from
+msgid "Valid from"
+msgstr "Vigente desde"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__date_to
+msgid "Valid until"
+msgstr "Vigente hasta"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__last_supplier_id
+msgid "Vendor"
+msgstr "Proveedor"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert__warehouse_id
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_responsible__warehouse_id
+#: model:ir.model.fields,field_description:low_stock_alert.field_stock_low_alert_exception__warehouse_id
+#: model_terms:ir.ui.view,arch_db:low_stock_alert.view_stock_low_alert_search
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: low_stock_alert
+#: model:ir.model.fields,help:low_stock_alert.field_res_config_settings__stock_low_alert_resend_hours
+msgid "While stock remains at or below the minimum, the alert can be sent again after this interval. Use 0 to disable automatic resending."
+msgstr "Mientras el stock continúe en o por debajo del mínimo, la alerta puede volver a notificarse después de este intervalo. Use 0 para no reenviar automáticamente."
+

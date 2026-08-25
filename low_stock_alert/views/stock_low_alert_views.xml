@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_low_alert_search" model="ir.ui.view">
+        <field name="name">stock.low.alert.search</field>
+        <field name="model">stock.low.alert</field>
+        <field name="arch" type="xml">
+            <search string="Stock alerts">
+                <field name="name"/>
+                <field name="product_id"/>
+                <field name="assigned_user_id"/>
+                <field name="warehouse_id"/>
+                <field name="last_supplier_id"/>
+                <filter name="open" string="Open alerts" domain="[('state','=','open')]"/>
+                <filter name="resolved" string="Resolved alerts" domain="[('state','=','resolved')]"/>
+                <filter name="ignored" string="Ignored alerts" domain="[('state','=','ignored')]"/>
+                <separator/>
+                <filter name="my_alerts" string="My alerts" domain="[('assigned_user_id','=',uid)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Product" name="group_product" context="{'group_by':'product_id'}"/>
+                    <filter string="User" name="group_user" context="{'group_by':'assigned_user_id'}"/>
+                    <filter string="Warehouse" name="group_warehouse" context="{'group_by':'warehouse_id'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by':'state'}"/>
+                    <filter string="Creation date" name="group_create_date" context="{'group_by':'create_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_stock_low_alert_list" model="ir.ui.view">
+        <field name="name">stock.low.alert.list</field>
+        <field name="model">stock.low.alert</field>
+        <field name="arch" type="xml">
+            <list string="Stock alerts" create="0" delete="0" decoration-danger="state == 'open' and stock_current &lt; min_qty" decoration-muted="state != 'open'">
+                <field name="name"/>
+                <field name="create_date" string="Creation date"/>
+                <field name="assigned_user_id"/>
+                <field name="product_id"/>
+                <field name="warehouse_id" optional="show"/>
+                <field name="stock_current"/>
+                <field name="min_qty"/>
+                <field name="max_qty"/>
+                <field name="last_purchase_date" optional="show"/>
+                <field name="last_supplier_id" optional="show"/>
+                <field name="last_purchase_qty" optional="show"/>
+                <field name="notification_count"/>
+                <field name="related_alert_count" optional="show"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_stock_low_alert_form" model="ir.ui.view">
+        <field name="name">stock.low.alert.form</field>
+        <field name="model">stock.low.alert</field>
+        <field name="arch" type="xml">
+            <form string="Stock alert" create="0" delete="0">
+                <header>
+                    <button name="action_send_notification" type="object" string="Send alert now" class="btn-primary" invisible="state != 'open'"/>
+                    <button name="action_resolve" type="object" string="Mark as resolved" invisible="state != 'open'"/>
+                    <button name="action_ignore" type="object" string="Ignore" invisible="state != 'open'"/>
+                    <button name="action_reopen" type="object" string="Reopen" invisible="state == 'open'" groups="stock.group_stock_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="open,resolved,ignored"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_related_alerts" type="object" class="oe_stat_button" icon="fa-link" invisible="related_alert_count == 0">
+                            <field name="related_alert_count" widget="statinfo" string="Related"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="assigned_user_id"/>
+                            <field name="product_id"/>
+                            <field name="orderpoint_id"/>
+                            <field name="warehouse_id"/>
+                            <field name="location_id" groups="stock.group_stock_multi_locations"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <field name="create_date" string="Creation date" readonly="1"/>
+                            <field name="first_alert_date"/>
+                            <field name="last_alert_date"/>
+                            <field name="last_notification_date"/>
+                            <field name="resolved_date" invisible="state == 'open'"/>
+                            <field name="notification_count"/>
+                        </group>
+                    </group>
+                    <group string="Stock and reordering rule">
+                        <group>
+                            <field name="stock_current"/>
+                            <field name="uom_id"/>
+                        </group>
+                        <group>
+                            <field name="min_qty"/>
+                            <field name="max_qty"/>
+                        </group>
+                    </group>
+                    <group string="Last purchase">
+                        <group>
+                            <field name="last_purchase_date"/>
+                            <field name="last_purchase_order_id"/>
+                        </group>
+                        <group>
+                            <field name="last_supplier_id"/>
+                            <field name="last_purchase_qty"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Notification history">
+                            <field name="notification_ids" readonly="1">
+                                <list create="0" delete="0">
+                                    <field name="sent_at"/>
+                                    <field name="user_id"/>
+                                    <field name="channel"/>
+                                    <field name="state" widget="badge"/>
+                                    <field name="activity_id" optional="show"/>
+                                    <field name="email_to" optional="show"/>
+                                    <field name="error_message" optional="hide"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_stock_low_alert" model="ir.actions.act_window">
+        <field name="name">Alerts</field>
+        <field name="res_model">stock.low.alert</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_stock_low_alert_search"/>
+        <field name="context">{'search_default_open': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No stock alerts found.</p>
+            <p>Alerts are automatically generated from reordering rules when current stock reaches or falls below the configured minimum.</p>
+        </field>
+    </record>
+</odoo>

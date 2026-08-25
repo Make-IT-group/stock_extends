@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_stock_low_alert_root"
+              name="Alerts"
+              parent="stock.menu_warehouse_report"
+              sequence="260"
+              groups="stock.group_stock_user"/>
+
+    <menuitem id="menu_stock_low_alert"
+              name="Stock alerts"
+              parent="menu_stock_low_alert_root"
+              action="action_stock_low_alert"
+              sequence="10"
+              groups="stock.group_stock_user"/>
+
+    <menuitem id="menu_stock_low_alert_responsible"
+              name="Responsibles"
+              parent="menu_stock_low_alert_root"
+              action="action_stock_low_alert_responsible"
+              sequence="20"
+              groups="stock.group_stock_manager"/>
+
+    <menuitem id="menu_stock_low_alert_exception"
+              name="Exceptions"
+              parent="menu_stock_low_alert_root"
+              action="action_stock_low_alert_exception"
+              sequence="30"
+              groups="stock.group_stock_manager"/>
+</odoo>

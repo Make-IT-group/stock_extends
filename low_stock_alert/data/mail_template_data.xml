@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="mail_template_stock_low_alert" model="mail.template">
+        <field name="name">Low stock alert</field>
+        <field name="model_id" ref="model_stock_low_alert"/>
+        <field name="subject">Low stock: {{ object.product_id.display_name }}</field>
+        <field name="email_from">{{ object.company_id.email_formatted or user.email_formatted }}</field>
+        <field name="body_html" type="html">
+            <div style="font-family: Arial, sans-serif; font-size: 14px;">
+                <p>Hello <t t-out="object.assigned_user_id.name or ''"/>,</p>
+                <p>Low stock was detected for <strong><t t-out="object.product_id.display_name"/></strong>.</p>
+                <table style="border-collapse: collapse;">
+                    <tr><td style="padding:4px 12px 4px 0;"><strong>Current stock</strong></td><td><t t-out="object.stock_current"/> <t t-out="object.uom_id.name or ''"/></td></tr>
+                    <tr><td style="padding:4px 12px 4px 0;"><strong>Minimum</strong></td><td><t t-out="object.min_qty"/></td></tr>
+                    <tr><td style="padding:4px 12px 4px 0;"><strong>Maximum</strong></td><td><t t-out="object.max_qty"/></td></tr>
+                    <tr><td style="padding:4px 12px 4px 0;"><strong>Warehouse</strong></td><td><t t-out="object.warehouse_id.display_name or ''"/></td></tr>
+                    <tr><td style="padding:4px 12px 4px 0;"><strong>Last purchase vendor</strong></td><td><t t-out="object.last_supplier_id.display_name or '-'"/></td></tr>
+                    <tr><td style="padding:4px 12px 4px 0;"><strong>Last purchase quantity</strong></td><td><t t-out="object.last_purchase_qty"/></td></tr>
+                </table>
+                <p>Review alert <strong><t t-out="object.name"/></strong> in Inventory / Reporting / Alerts.</p>
+            </div>
+        </field>
+        <field name="auto_delete" eval="False"/>
+    </record>
+</odoo>

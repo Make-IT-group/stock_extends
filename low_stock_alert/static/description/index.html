@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Make IT - Low Stock Alerts</title>
+</head>
+<body>
+<section class="oe_container" style="font-family: Inter, Arial, sans-serif; color:#25313c; background:#fff;">
+    <div style="max-width:1100px; margin:0 auto; padding:48px 24px 24px;">
+        <div style="background:linear-gradient(135deg,#eff8dc 0%,#f9fbf5 60%,#fff8d8 100%); border:1px solid #dce8c8; border-radius:22px; padding:44px; overflow:hidden;">
+            <div style="display:flex; gap:28px; align-items:center; flex-wrap:wrap;">
+                <img src="icon.png" alt="Low Stock Alerts" style="width:116px; height:116px; object-fit:cover; border-radius:24px; box-shadow:0 10px 28px rgba(44,62,80,.15);"/>
+                <div style="flex:1; min-width:260px;">
+                    <div style="font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#6d863f; margin-bottom:8px;">Odoo 18 · Inventory</div>
+                    <h1 style="font-size:38px; line-height:1.15; margin:0 0 14px; color:#303638;">Low Stock Alerts</h1>
+                    <p style="font-size:18px; line-height:1.65; margin:0; max-width:760px;">Turn reordering rule thresholds into actionable, traceable alerts. Assign owners, exclude special cases, and notify users through activities, email, or both.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: Inter, Arial, sans-serif; color:#25313c; background:#fff;">
+    <div style="max-width:1100px; margin:0 auto; padding:24px;">
+        <div style="text-align:center; margin:10px auto 30px; max-width:760px;">
+            <h2 style="font-size:28px; margin-bottom:10px;">Know what needs attention before it becomes a shortage</h2>
+            <p style="font-size:16px; line-height:1.7; color:#5c6872;">The scheduled check reads the minimum and maximum values already configured in Odoo reordering rules. When current stock reaches or falls below the minimum, the module creates or updates an alert and follows the notification policy you defined.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
+            <div style="border:1px solid #e4e8eb; border-radius:16px; padding:24px;">
+                <div style="font-size:28px;">📉</div><h3 style="margin:12px 0 8px;">Threshold monitoring</h3>
+                <p style="margin:0; line-height:1.6; color:#64717b;">Uses the minimum and maximum quantities from each reordering rule. No duplicate threshold configuration is required.</p>
+            </div>
+            <div style="border:1px solid #e4e8eb; border-radius:16px; padding:24px;">
+                <div style="font-size:28px;">👤</div><h3 style="margin:12px 0 8px;">Responsible rules</h3>
+                <p style="margin:0; line-height:1.6; color:#64717b;">Route alerts by product, product category, or warehouse, with sequence-based priority and a global fallback.</p>
+            </div>
+            <div style="border:1px solid #e4e8eb; border-radius:16px; padding:24px;">
+                <div style="font-size:28px;">🔔</div><h3 style="margin:12px 0 8px;">Flexible notifications</h3>
+                <p style="margin:0; line-height:1.6; color:#64717b;">Send an Odoo activity, an email, or both. Configure a resend interval for alerts that remain open.</p>
+            </div>
+            <div style="border:1px solid #e4e8eb; border-radius:16px; padding:24px;">
+                <div style="font-size:28px;">🛡️</div><h3 style="margin:12px 0 8px;">Controlled exceptions</h3>
+                <p style="margin:0; line-height:1.6; color:#64717b;">Exclude products, categories, warehouses, locations, or individual reordering rules, optionally for a limited date range.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: Inter, Arial, sans-serif; color:#25313c; background:#fff;">
+    <div style="max-width:1100px; margin:0 auto; padding:30px 24px;">
+        <div style="background:#303638; color:#fff; border-radius:20px; padding:34px;">
+            <h2 style="font-size:26px; margin:0 0 24px;">How it works</h2>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px;">
+                <div style="background:rgba(255,255,255,.08); border-radius:14px; padding:20px;"><strong>1. Read</strong><br/><span style="opacity:.82; line-height:1.6;">The scheduled action reads active Odoo reordering rules.</span></div>
+                <div style="background:rgba(255,255,255,.08); border-radius:14px; padding:20px;"><strong>2. Compare</strong><br/><span style="opacity:.82; line-height:1.6;">Current stock is compared with the configured minimum.</span></div>
+                <div style="background:rgba(255,255,255,.08); border-radius:14px; padding:20px;"><strong>3. Route</strong><br/><span style="opacity:.82; line-height:1.6;">Exceptions and responsible rules determine what happens next.</span></div>
+                <div style="background:rgba(255,255,255,.08); border-radius:14px; padding:20px;"><strong>4. Notify</strong><br/><span style="opacity:.82; line-height:1.6;">The owner receives an activity, an email, or both.</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: Inter, Arial, sans-serif; color:#25313c; background:#fff;">
+    <div style="max-width:1100px; margin:0 auto; padding:26px 24px;">
+        <h2 style="font-size:28px; text-align:center; margin-bottom:28px;">Alert information at a glance</h2>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;">
+            <div style="border-left:5px solid #a9cc78; padding:6px 0 6px 22px;">
+                <h3 style="margin-top:0;">Operational context</h3>
+                <p style="line-height:1.8; color:#5f6b74;">Assigned user · Creation date · Product · Warehouse · Location · Current stock · Configured minimum · Configured maximum</p>
+            </div>
+            <div style="border-left:5px solid #fff08a; padding:6px 0 6px 22px;">
+                <h3 style="margin-top:0;">Purchasing and follow-up</h3>
+                <p style="line-height:1.8; color:#5f6b74;">Last purchase · Purchase order · Vendor · Last purchase quantity · Times sent · Notification history · Related alerts</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: Inter, Arial, sans-serif; color:#25313c; background:#fff;">
+    <div style="max-width:1100px; margin:0 auto; padding:30px 24px 50px;">
+        <div style="border:1px solid #e4e8eb; border-radius:20px; padding:34px;">
+            <h2 style="font-size:27px; margin-top:0;">Configuration</h2>
+            <ol style="padding-left:22px; line-height:1.9; color:#56636d;">
+                <li>Open <strong>Inventory &gt; Configuration &gt; Settings</strong> and enable <strong>Low Stock Alerts</strong>.</li>
+                <li>Choose the default notification channel and the automatic resend interval.</li>
+                <li>Open <strong>Inventory &gt; Reporting &gt; Alerts &gt; Responsibles</strong> and define who owns each alert scope.</li>
+                <li>Use <strong>Exceptions</strong> for products or contexts that should not create alerts.</li>
+                <li>The hourly scheduled action checks reordering rules automatically. It can also be executed manually for testing.</li>
+            </ol>
+            <div style="margin-top:26px; padding:18px 20px; background:#f7f9f5; border-radius:12px; color:#52605c;">
+                <strong>Resolution logic:</strong> when stock rises above the minimum, the current open alert is resolved automatically. If stock falls again later, a new alert is created and linked to earlier alerts for the same reordering rule.
+            </div>
+        </div>
+        <div style="text-align:center; color:#7b868e; font-size:13px; padding-top:28px;">Make IT · Odoo 18 · LGPL-3</div>
+    </div>
+</section>
+</body>
+</html>

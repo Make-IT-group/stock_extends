@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_stock_low_alert" model="ir.sequence">
+        <field name="name">Low stock alert</field>
+        <field name="code">stock.low.alert</field>
+        <field name="prefix">STK-ALR-</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="mail_activity_type_stock_low_alert" model="mail.activity.type">
+        <field name="name">Low stock alert</field>
+        <field name="summary">Review low stock</field>
+        <field name="delay_count">0</field>
+        <field name="delay_unit">days</field>
+        <field name="keep_done">True</field>
+    </record>
+
+    <record id="ir_cron_stock_low_alert_check" model="ir.cron">
+        <field name="name">Stock alerts: review reordering rules</field>
+        <field name="model_id" ref="model_stock_low_alert"/>
+        <field name="state">code</field>
+        <field name="code">model.action_run_stock_alert_check()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="active">True</field>
+        <field name="priority">5</field>
+    </record>
+</odoo>
