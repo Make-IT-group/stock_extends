@@ -26,7 +26,7 @@
 {
     "name": "Make IT - Low Stock Alerts",
     "summary": "Low stock alerts based on reordering rules",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.2",
     "category": "Inventory/Inventory",
     "author": "Make IT",
     "website": "http://www.makeitgroup.com/",

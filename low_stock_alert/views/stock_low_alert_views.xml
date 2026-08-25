@@ -15,7 +15,7 @@
                 <filter name="ignored" string="Ignored alerts" domain="[('state','=','ignored')]"/>
                 <separator/>
                 <filter name="my_alerts" string="My alerts" domain="[('assigned_user_id','=',uid)]"/>
-                <group expand="0" string="Group By">
+                <group>
                     <filter string="Product" name="group_product" context="{'group_by':'product_id'}"/>
                     <filter string="User" name="group_user" context="{'group_by':'assigned_user_id'}"/>
                     <filter string="Warehouse" name="group_warehouse" context="{'group_by':'warehouse_id'}"/>

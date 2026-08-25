@@ -13,7 +13,6 @@
         <field name="summary">Review low stock</field>
         <field name="delay_count">0</field>
         <field name="delay_unit">days</field>
-        <field name="keep_done">True</field>
     </record>
 
     <record id="ir_cron_stock_low_alert_check" model="ir.cron">
