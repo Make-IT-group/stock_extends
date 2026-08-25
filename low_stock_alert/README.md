@@ -1,4 +1,4 @@
-# Make IT - Low Stock Alerts (Odoo 18)
+# Make IT - Low Stock Alerts (Odoo 19)
 
 Low stock monitoring based on Odoo reordering rules (`stock.warehouse.orderpoint`). The module creates traceable alerts when current stock reaches or falls below the configured minimum.
 
@@ -49,3 +49,8 @@ The source code and technical definitions are written in English. Translations a
 
 - Spanish (`es`)
 - Spanish / Mexico (`es_MX`)
+
+
+## Odoo 19 compatibility
+
+This version is migrated for Odoo 19. The migration keeps the original module behavior and adapts technical references to the Odoo 19 API, including the Purchase Order Line unit-of-measure field (`product_uom_id`) and the Odoo 19 product quantity precision (`Product Unit`).
