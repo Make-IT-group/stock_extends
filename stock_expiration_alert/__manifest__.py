@@ -1,0 +1,22 @@
+{
+    "name": "Make IT - Stock Expiration Alerts",
+    "summary": "Configurable alerts for expiring and expired stock lots",
+    "version": "19.0.1.0.0",
+    "category": "Inventory/Inventory",
+    "author": "Make IT",
+    "website": "http://www.makeitgroup.com/",
+    "license": "LGPL-3",
+    "depends": ["stock", "product_expiry", "mail"],
+    "data": [
+        "security/stock_expiration_alert_security.xml",
+        "security/ir.model.access.csv",
+        "data/mail_template_data.xml",
+        "data/ir_cron_data.xml",
+        "views/stock_expiration_alert_rule_views.xml",
+        "views/stock_expiration_alert_views.xml",
+        "views/res_config_settings_views.xml",
+        "views/stock_expiration_alert_menus.xml",
+    ],
+    "installable": True,
+    "application": False,
+}
