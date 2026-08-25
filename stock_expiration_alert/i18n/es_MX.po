@@ -1,5 +1,7 @@
 # Translation of Odoo Server.
-# This file contains the translation of stock_expiration_alert.
+# This file contains the translation of the following modules:
+#   * stock_expiration_alert
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
@@ -9,194 +11,324 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Stock Expiration Alerts"
 msgstr "Alertas de caducidad de existencias"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expiration Alerts"
 msgstr "Alertas de caducidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Stock expiration alert"
 msgstr "Alerta de caducidad de existencias"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Stock expiration alert rule"
 msgstr "Regla de alerta de caducidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Stock expiration alert notification history"
 msgstr "Historial de notificaciones de alertas de caducidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Enable stock expiration alerts"
 msgstr "Activar alertas de caducidad de existencias"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Enable or disable automatic expiration analysis for stock lots."
 msgstr "Activa o desactiva el análisis automático de caducidad de lotes."
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Default notification channel"
 msgstr "Canal de notificación predeterminado"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Notification channel"
 msgstr "Canal de notificación"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Activity"
 msgstr "Actividad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Email"
 msgstr "Correo electrónico"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Activity and email"
 msgstr "Actividad y correo electrónico"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Use global settings"
 msgstr "Usar configuración global"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Resend every (hours)"
 msgstr "Reenviar cada (horas)"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Resend frequency"
 msgstr "Frecuencia de reenvío"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Alert Rules"
 msgstr "Reglas de alerta"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expiration alert rules"
 msgstr "Reglas de alerta de caducidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expiration alert rule"
 msgstr "Regla de alerta de caducidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Days before expiration"
 msgstr "Días antes de la caducidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Days before expiration cannot be negative."
 msgstr "Los días antes de la caducidad no pueden ser negativos."
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Responsible user"
 msgstr "Usuario responsable"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Severity"
 msgstr "Severidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Information"
 msgstr "Información"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Warning"
 msgstr "Advertencia"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Critical"
 msgstr "Crítica"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Product category"
 msgstr "Categoría de producto"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Warehouse"
 msgstr "Almacén"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Location"
 msgstr "Ubicación"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Scope"
 msgstr "Alcance"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Lower values have higher priority."
 msgstr "Los valores menores tienen mayor prioridad."
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "The configured category does not match the selected product category."
-msgstr "La categoría configurada no coincide con la categoría del producto seleccionado."
+msgstr ""
+"La categoría configurada no coincide con la categoría del producto "
+"seleccionado."
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "The selected location does not belong to the configured warehouse."
 msgstr "La ubicación seleccionada no pertenece al almacén configurado."
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Open"
 msgstr "Abierta"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Resolved"
 msgstr "Resuelta"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Ignored"
 msgstr "Ignorada"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Open alerts"
 msgstr "Alertas abiertas"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expired"
 msgstr "Caducado"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "My alerts"
 msgstr "Mis alertas"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Lot/Serial Number"
 msgstr "Lote/Número de serie"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Lot/Serial"
 msgstr "Lote/Serie"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expiration month"
 msgstr "Mes de caducidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expiration date"
 msgstr "Fecha de caducidad"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Days remaining"
 msgstr "Días restantes"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Assigned user"
 msgstr "Usuario asignado"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Times sent"
 msgstr "Veces enviada"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Send alert now"
 msgstr "Enviar alerta ahora"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Mark as resolved"
 msgstr "Marcar como resuelta"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Ignore"
 msgstr "Ignorar"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Reopen"
 msgstr "Reabrir"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Related"
 msgstr "Relacionadas"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expiring stock"
 msgstr "Existencias por caducar"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Notification history"
 msgstr "Historial de notificaciones"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Sent"
 msgstr "Enviada"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Done"
 msgstr "Realizada"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Ignored/Deleted"
 msgstr "Ignorada/Eliminada"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Error"
 msgstr "Error"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Error details"
 msgstr "Detalles del error"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Review expiring stock"
 msgstr "Revisar existencias por caducar"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Stock expiration alerts: review lots"
 msgstr "Alertas de caducidad: revisar lotes"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "No stock expiration alerts found."
 msgstr "No se encontraron alertas de caducidad de existencias."
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "The alert condition is no longer applicable."
 msgstr "La condición de la alerta ya no es aplicable."
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "The user does not have an email address configured."
 msgstr "El usuario no tiene una dirección de correo electrónico configurada."
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expiring stock: %(product)s"
 msgstr "Existencias por caducar: %(product)s"
 
+#. module: stock_expiration_alert
+#: code:addons/stock_expiration_alert/models/stock_expiration_alert.py:0
 msgid "Expiration alert"
 msgstr "Alerta de caducidad"
